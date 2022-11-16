@@ -45,28 +45,10 @@ public class subscriptionController {
 	
 	}
 	
-	@GetMapping("/{userId}")
-	public void getSubjscriptionByUserID(@PathVariable long UserId) { 
 	
-	}
 
-<<<<<<<<< Temporary merge branch 1
-	@GetMapping("/{userId}")
-	public void hellohiigetSubjscriptionByUserID(@PathVariable long UserId) {
 
-=========
-	public String test(){
-		return "Hello World";
-	}
 
-	
-	@GetMapping("/hello")
-	public void sayhello(){ 
-		System.out.println("Hello");
->>>>>>>>> Temporary merge branch 2
-	}
   
-	
-	
 
 }
