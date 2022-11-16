@@ -50,6 +50,7 @@ public class subscriptionController {
 	
 	}
 
+
 	public String test(){
 		return "Hello World";
 	}
@@ -58,6 +59,7 @@ public class subscriptionController {
 	@GetMapping("/hello")
 	public void sayhello(){ 
 		System.out.println("Hello");
+
 	}
   
 	
