@@ -49,6 +49,11 @@ public class subscriptionController {
 	public void getSubjscriptionByUserID(@PathVariable long UserId) { 
 	
 	}
+
+	public String test(){
+		return "Hello World";
+	}
+
 	
 	
   
