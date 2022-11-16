@@ -49,8 +49,11 @@ public class subscriptionController {
 	public void getSubjscriptionByUserID(@PathVariable long UserId) { 
 	
 	}
-	
-	
+
+	@GetMapping("/{userId}")
+	public void hellogetSubjscriptionByUserID(@PathVariable long UserId) {
+
+	}
   
 	
 	
