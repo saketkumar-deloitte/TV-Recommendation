@@ -50,8 +50,15 @@ public class subscriptionController {
 	
 	}
 
-	@GetMapping("/{userId}")
-	public void hellohiigetSubjscriptionByUserID(@PathVariable long UserId) {
+
+	public String test(){
+		return "Hello World";
+	}
+
+	
+	@GetMapping("/hello")
+	public void sayhello(){ 
+		System.out.println("Hello");
 
 	}
   
