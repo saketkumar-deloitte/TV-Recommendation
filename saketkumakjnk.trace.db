@@ -186,3 +186,78 @@ select subscripti0_.subsid as subsid1_0_, subscripti0_.end_date as end_date2_0_,
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-11-18 11:35:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, [*]year integer not null, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, year integer not null, primary key (movie_id)) [42001-214]
+2022-11-18 11:36:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, [*]year integer not null, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, year integer not null, primary key (movie_id)) [42001-214]
+2022-11-18 11:39:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, [*]year integer not null, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, year integer not null, primary key (movie_id)) [42001-214]
+2022-11-18 11:46:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, [*]year integer not null, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, year integer not null, primary key (movie_id)) [42001-214]
+2022-11-18 12:02:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, [*]year integer not null, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, year integer not null, primary key (movie_id)) [42001-214]
+2022-11-18 12:09:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, [*]year integer not null, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, year integer not null, primary key (movie_id)) [42001-214]
+2022-11-18 12:14:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, [*]year integer, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, year integer, primary key (movie_id)) [42001-214]
+2022-11-18 12:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, [*]year integer, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, year integer, primary key (movie_id)) [42001-214]
+2022-11-18 12:23:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, [*]year integer, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, year integer, primary key (movie_id)) [42001-214]
+2022-11-18 12:26:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table hibernate_sequence (next_val bigint) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-214]
+2022-11-18 12:26:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HIBERNATE_SEQUENCE" not found (this database is empty); SQL statement:
+insert into hibernate_sequence values ( 1 ) [42104-214]
+2022-11-18 12:26:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table history (id integer not null, genre varchar(255), movie_id integer, user_id integer, primary key (id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table history (id integer not null, genre varchar(255), movie_id integer, user_id integer, primary key (id)) engine=InnoDB [42001-214]
+2022-11-18 12:26:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, [*]year integer, primary key (movie_id)) engine=InnoDB"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, year integer, primary key (movie_id)) engine=InnoDB [42001-214]
+2022-11-18 12:26:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table subscription (id bigint not null, end_date datetime, movie_id bigint not null, start_date datetime, total_price integer, user_id bigint not null, primary key (id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table subscription (id bigint not null, end_date datetime, movie_id bigint not null, start_date datetime, total_price integer, user_id bigint not null, primary key (id)) engine=InnoDB [42001-214]
+2022-11-18 12:26:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table users (id integer not null, age integer not null, email varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table users (id integer not null, age integer not null, email varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-214]
+2022-11-18 12:26:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SUBSCRIPTION" not found (this database is empty); SQL statement:
+select subscripti0_.id as id1_2_, subscripti0_.end_date as end_date2_2_, subscripti0_.movie_id as movie_id3_2_, subscripti0_.start_date as start_da4_2_, subscripti0_.total_price as total_pr5_2_, subscripti0_.user_id as user_id6_2_ from subscription subscripti0_ [42104-214]
+2022-11-18 12:27:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SUBSCRIPTION" not found (this database is empty); SQL statement:
+select subscripti0_.id as id1_2_, subscripti0_.end_date as end_date2_2_, subscripti0_.movie_id as movie_id3_2_, subscripti0_.start_date as start_da4_2_, subscripti0_.total_price as total_pr5_2_, subscripti0_.user_id as user_id6_2_ from subscription subscripti0_ [42104-214]
+2022-11-18 12:28:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SUBSCRIPTION" not found (this database is empty); SQL statement:
+select subscripti0_.id as id1_2_, subscripti0_.end_date as end_date2_2_, subscripti0_.movie_id as movie_id3_2_, subscripti0_.start_date as start_da4_2_, subscripti0_.total_price as total_pr5_2_, subscripti0_.user_id as user_id6_2_ from subscription subscripti0_ [42104-214]
+2022-11-18 12:29:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SUBSCRIPTION" not found (this database is empty); SQL statement:
+select subscripti0_.id as id1_2_, subscripti0_.end_date as end_date2_2_, subscripti0_.movie_id as movie_id3_2_, subscripti0_.start_date as start_da4_2_, subscripti0_.total_price as total_pr5_2_, subscripti0_.user_id as user_id6_2_ from subscription subscripti0_ [42104-214]
+2022-11-18 12:30:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SUBSCRIPTION" not found (this database is empty); SQL statement:
+select subscripti0_.id as id1_2_, subscripti0_.end_date as end_date2_2_, subscripti0_.movie_id as movie_id3_2_, subscripti0_.start_date as start_da4_2_, subscripti0_.total_price as total_pr5_2_, subscripti0_.user_id as user_id6_2_ from subscription subscripti0_ [42104-214]
+2022-11-18 12:31:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SUBSCRIPTION" not found (this database is empty); SQL statement:
+select subscripti0_.id as id1_2_, subscripti0_.end_date as end_date2_2_, subscripti0_.movie_id as movie_id3_2_, subscripti0_.start_date as start_da4_2_, subscripti0_.total_price as total_pr5_2_, subscripti0_.user_id as user_id6_2_ from subscription subscripti0_ [42104-214]
+2022-11-18 12:32:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SUBSCRIPTION" not found (this database is empty); SQL statement:
+select subscripti0_.id as id1_2_, subscripti0_.end_date as end_date2_2_, subscripti0_.movie_id as movie_id3_2_, subscripti0_.start_date as start_da4_2_, subscripti0_.total_price as total_pr5_2_, subscripti0_.user_id as user_id6_2_ from subscription subscripti0_ [42104-214]
+2022-11-18 12:33:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, [*]year integer not null, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table movies (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, year integer not null, primary key (movie_id)) [42001-214]
+2022-11-18 12:35:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table see_show (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, [*]year integer not null, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table see_show (movie_id integer not null, category varchar(255), disney integer not null, movie_genre integer, hulu integer not null, movie_name varchar(255), netflix integer not null, movie_price integer, prime integer not null, rating integer not null, type integer not null, year integer not null, primary key (movie_id)) [42001-214]
+2022-11-18 12:41:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table see_show (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, [*]year integer, primary key (movie_id))"; expected "identifier"; SQL statement:
+create table see_show (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, year integer, primary key (movie_id)) [42001-214]
