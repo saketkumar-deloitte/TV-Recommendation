@@ -59,7 +59,6 @@ public class ExcelReadService {
                 cr.setPrice(Integer.parseInt(record.getString("Price")));
 
             list.add(cr);
-            System.out.println(cr.getMovie_name());
 
         });
 

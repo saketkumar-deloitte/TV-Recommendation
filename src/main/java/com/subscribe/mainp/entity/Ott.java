@@ -10,7 +10,7 @@ public class Ott {
     @Id
     private Integer movie_id;
     //@Column(name="MovieTitle")
-    private String movie_name;
+    private String moviename;
     // @Column(name="ReleaseYear")
     private String category;
     //@Column(name="MovieRating")
@@ -57,11 +57,11 @@ public class Ott {
     }
 
     public String getMovie_name() {
-        return movie_name;
+        return moviename;
     }
 
     public void setMovie_name(String movie_name) {
-        this.movie_name = movie_name;
+        this.moviename = movie_name;
     }
 
 
