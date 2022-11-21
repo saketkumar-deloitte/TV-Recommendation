@@ -2,11 +2,16 @@ package com.subscribe.mainp.service;
 
 import com.subscribe.mainp.dto.HistoryDto;
 import com.subscribe.mainp.entity.History;
+import com.subscribe.mainp.entity.Ott;
+import com.subscribe.mainp.entity.User;
 import com.subscribe.mainp.repository.HistoryRepository;
+import com.subscribe.mainp.repository.OttRepo;
+import com.subscribe.mainp.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class HistoryService implements HistoryImpl{
@@ -14,13 +19,20 @@ public class HistoryService implements HistoryImpl{
     @Autowired
     HistoryRepository historyRepository;
 
-    @Override
-    public History saveHistory(HistoryDto hist) {
-        History his = new History();
-        his.setMovieId(hist.getMovieId());
-        his.setUserId(hist.getUserId());
-        his.setGenre("Comedy");
-        return historyRepository.save(his);
+    @Autowired
+    UserRepo userrepo;
+
+    @Autowired
+    OttRepo ottRepo;
+
+    public History saveHistory(HistoryDto historyDto) {
+        User user = this.userrepo.findById(historyDto.getUserId()).get();
+        Ott ott = this.ottRepo.findById(historyDto.getMovieId()).get();
+        History history = new History();
+        history.setOtt(ott);
+        history.setGenre(ott.getGenre());
+        history.setUser(user);
+        return this.historyRepository.save(history);
     }
 
     @Override

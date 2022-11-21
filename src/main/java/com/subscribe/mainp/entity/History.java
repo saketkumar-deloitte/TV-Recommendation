@@ -18,9 +18,18 @@ public class History {
     private Integer id;
 
     @Column
-    private String genre;
+    private Integer genre;
+
+
     @Column
-    private int movieId;
-    @Column
-    private int userId;
+    private Integer rating;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "history_uid")
+    private User user;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "history_ottid")
+    private Ott ott;
 }
