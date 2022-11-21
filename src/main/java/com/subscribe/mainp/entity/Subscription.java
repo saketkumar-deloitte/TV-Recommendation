@@ -2,10 +2,7 @@ package com.subscribe.mainp.entity;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import lombok.Data;
 
@@ -16,10 +13,16 @@ public class Subscription {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	private long userId;
-	private long movieId;
 	private Date startDate;
 	private Date endDate;
 	private Integer totalPrice;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "subs_uid")
+	private User user;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "subs_ottid")
+	private Ott ott;
 	
 }

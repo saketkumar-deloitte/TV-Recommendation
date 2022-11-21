@@ -4,6 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import com.subscribe.mainp.entity.Ott;
+import com.subscribe.mainp.entity.User;
+import com.subscribe.mainp.repository.OttRepo;
+import com.subscribe.mainp.repository.UserRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +27,12 @@ public class subscriptionService implements subscriptionImpl {
 	
 	@Autowired
 	subscriptionrepo subsrepo;
+
+	@Autowired
+	UserRepo userrepo;
+
+	@Autowired
+	OttRepo ottRepo;
 
 	@Override
 	public List<Subscription> getAllSubscription() {
@@ -52,30 +63,32 @@ public class subscriptionService implements subscriptionImpl {
 
 	@Override
 	public Subscription addSubscription(subscriptionDto subs) {
-	
-		
-		removeSubscription();
+
+		User user = this.userrepo.findById(subs.getUserId()).get();
+		Ott ott = this.ottRepo.findById(subs.getMovieId()).get();
+
+//		removeSubscription();
 	
 	    Date today = new Date();  
 	    long ltime = today.getTime()+subs.getNoOfDays()*24*60*60*1000;
 	    Date endtime = new Date(ltime);
 		
 		Subscription sub=new Subscription();
-		sub.setUserId(subs.getUserId());
-		sub.setMovieId(subs.getMovieId());
+		sub.setUser(user);
+		sub.setOtt(ott);
 		sub.setStartDate(today);
 		sub.setEndDate(endtime);
 		sub.setTotalPrice(subs.getPrice());
 		subsrepo.save(sub);
 		
-		return null;
+		return sub;
 	}
 
 
 	@Override
 	public void getSubscriptionByUserID(long UserId) {
-		// TODO Auto-generated method stub
-		
+
+
 	}
 
 }
