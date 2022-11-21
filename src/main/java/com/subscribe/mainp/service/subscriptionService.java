@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import com.subscribe.mainp.dto.HistoryDto;
 import com.subscribe.mainp.entity.History;
 import com.subscribe.mainp.entity.Ott;
 import com.subscribe.mainp.entity.User;
@@ -35,6 +36,9 @@ public class subscriptionService implements subscriptionImpl {
 	@Autowired
 	OttRepo ottRepo;
 
+	@Autowired
+	HistoryService historyService;
+
 	@Override
 	public List<Subscription> getAllSubscription() {
 		
@@ -52,12 +56,13 @@ public class subscriptionService implements subscriptionImpl {
 		for(Subscription subsVal:listSubs) {
 			if(subsVal.getEndDate().compareTo(new Date())<0) {
 				subsrepo.deleteById(subsVal.getId());
+				addTohistory(subsVal);
 			}
 		}
 		
 		
 		logger.info("calling all function"+new Date());
-		
+
 		
 		return null;
 	}
@@ -90,6 +95,13 @@ public class subscriptionService implements subscriptionImpl {
 	public List<Subscription> getSubscriptionByUserID(int userid) {
 		List<Subscription> subs = subsrepo.findByUserId(userid);
 		return subs;
+	}
+
+	public void addTohistory(Subscription subsValue) {
+		HistoryDto his = new HistoryDto();
+		his.setMovieId(subsValue.getOtt().getMovie_id());
+		his.setUserId(subsValue.getUser().getId());
+		historyService.saveHistory(his);
 	}
 
 }
