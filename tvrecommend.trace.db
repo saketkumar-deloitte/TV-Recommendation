@@ -1,3 +1,0 @@
-2022-11-18 13:09:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table see_show (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, [*]year integer, primary key (movie_id))"; expected "identifier"; SQL statement:
-create table see_show (movie_id integer not null, category varchar(255), disney integer, movie_genre integer, hulu integer, movie_name varchar(255), netflix integer, movie_price integer, prime integer, rating integer, type integer, year integer, primary key (movie_id)) [42001-214]
