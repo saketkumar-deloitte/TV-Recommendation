@@ -1,8 +1,12 @@
 package com.subscribe.mainp.controller;
 
 import java.util.List;
+import java.util.Optional;
 
+import com.subscribe.mainp.entity.History;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,14 +45,22 @@ public class subscriptionController {
 	
 	
 	@GetMapping("/{userId}")
-	public void getSubscriptionByUserID(@PathVariable long UserId) { 
+	public ResponseEntity<List<Subscription>> getSubscriptionByUserID(@PathVariable int userId) {
+		List<Subscription> sub = subsService.getSubscriptionByUserID(userId);
+		if (sub.size() == 0)
+		{
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		try {
+			return ResponseEntity.of(Optional.of(sub));
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
 	
 	}
-	
-	
 
-
-
-  
 
 }

@@ -22,7 +22,7 @@ public class HistoryController {
     @Autowired
     HistoryService historyService;
 
-    @PostMapping("/history")
+    @PostMapping("/")
     public ResponseEntity<History> createHistory(@RequestBody HistoryDto hist)
     {
         History h = null;
@@ -36,7 +36,7 @@ public class HistoryController {
         }
     }
 
-    @GetMapping(value = "/history/{userid}")
+    @GetMapping(value = "/{userid}")
     public ResponseEntity<List<History>> getHistoryByUserId(@PathVariable int userid){
         List<History> h = history.getHistoryByUserId(userid);
         if (h.size() == 0)
@@ -46,7 +46,7 @@ public class HistoryController {
         return ResponseEntity.of(Optional.of(h));
     }
 
-    @DeleteMapping("/history/{historyid}")
+    @DeleteMapping("/{historyid}")
     public ResponseEntity<String> deleteHistory(@PathVariable int historyid){
         try{
             history.deleteHistory(historyid);

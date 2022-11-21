@@ -19,7 +19,8 @@ public interface subscriptionImpl {
 	public Subscription addSubscription(subscriptionDto subs);
 	
 	public Subscription removeSubscription();
-	
-	public void getSubscriptionByUserID(@PathVariable long UserId) ;
-	
-}
+
+	public List<Subscription> getSubscriptionByUserID(int userid);
+
+
+	}

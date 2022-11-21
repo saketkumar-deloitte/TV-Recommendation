@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import com.subscribe.mainp.entity.History;
 import com.subscribe.mainp.entity.Ott;
 import com.subscribe.mainp.entity.User;
 import com.subscribe.mainp.repository.OttRepo;
@@ -86,9 +87,9 @@ public class subscriptionService implements subscriptionImpl {
 
 
 	@Override
-	public void getSubscriptionByUserID(long UserId) {
-
-
+	public List<Subscription> getSubscriptionByUserID(int userid) {
+		List<Subscription> subs = subsrepo.findByUserId(userid);
+		return subs;
 	}
 
 }
