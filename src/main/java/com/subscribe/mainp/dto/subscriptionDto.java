@@ -9,8 +9,8 @@ import lombok.Data;
 @Data
 public class subscriptionDto {
 
-	private Long userId;
-	private Long movieId;
+	private Integer userId;
+	private Integer movieId;
 	private Integer noOfDays;
 	private Integer price;
 	
