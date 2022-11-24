@@ -6,10 +6,9 @@ import java.util.Date;
 import java.util.List;
 
 import com.subscribe.mainp.dto.HistoryDto;
-import com.subscribe.mainp.entity.History;
-import com.subscribe.mainp.entity.Ott;
-import com.subscribe.mainp.entity.User;
+import com.subscribe.mainp.entity.*;
 import com.subscribe.mainp.repository.OttRepo;
+import com.subscribe.mainp.repository.PlanRepository;
 import com.subscribe.mainp.repository.UserRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +18,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.subscribe.mainp.dto.subscriptionDto;
-import com.subscribe.mainp.entity.Subscription;
 import com.subscribe.mainp.repository.subscriptionrepo;
 
 @Service
@@ -34,7 +32,7 @@ public class subscriptionService implements subscriptionImpl {
 	UserRepo userrepo;
 
 	@Autowired
-	OttRepo ottRepo;
+	PlanRepository planRepository;
 
 	@Autowired
 	HistoryService historyService;
@@ -56,7 +54,6 @@ public class subscriptionService implements subscriptionImpl {
 		for(Subscription subsVal:listSubs) {
 			if(subsVal.getEndDate().compareTo(new Date())<0) {
 				subsrepo.deleteById(subsVal.getId());
-				addTohistory(subsVal);
 			}
 		}
 		
@@ -71,7 +68,7 @@ public class subscriptionService implements subscriptionImpl {
 	public Subscription addSubscription(subscriptionDto subs) {
 
 		User user = this.userrepo.findById(subs.getUserId()).get();
-		Ott ott = this.ottRepo.findById(subs.getMovieId()).get();
+		Plans plan = this.planRepository.findById(subs.getPlanId()).get();
 
 //		removeSubscription();
 	
@@ -81,7 +78,7 @@ public class subscriptionService implements subscriptionImpl {
 		
 		Subscription sub=new Subscription();
 		sub.setUser(user);
-		sub.setOtt(ott);
+		sub.setPlan(plan);
 		sub.setStartDate(today);
 		sub.setEndDate(endtime);
 		sub.setTotalPrice(subs.getPrice());
@@ -95,13 +92,6 @@ public class subscriptionService implements subscriptionImpl {
 	public List<Subscription> getSubscriptionByUserID(int userid) {
 		List<Subscription> subs = subsrepo.findByUserId(userid);
 		return subs;
-	}
-
-	public void addTohistory(Subscription subsValue) {
-		HistoryDto his = new HistoryDto();
-		his.setMovieId(subsValue.getOtt().getMovie_id());
-		his.setUserId(subsValue.getUser().getId());
-		historyService.saveHistory(his);
 	}
 
 }

@@ -24,7 +24,7 @@ public class ExcelReadService {
     public List<Ott> ReadDataFromExcel() throws EncryptedDocumentException, InvalidFormatException, IOException{
 
         List<Ott> list = new ArrayList<>();
-        File file = new File("/home/romarutinaik/Videos/TV-Recommendation/src/main/java/com/subscribe/mainp/controller/movies.csv");
+        File file = new File("/home/papraneet/Desktop/Product Month/TV-Recommendation/src/main/java/com/subscribe/mainp/controller/movies.csv");
         InputStream inputStream = new FileInputStream(file);
         CsvParserSettings setting = new CsvParserSettings();
         setting.setHeaderExtractionEnabled(true);
