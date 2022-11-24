@@ -10,7 +10,7 @@ import lombok.Data;
 public class subscriptionDto {
 
 	private Integer userId;
-	private Integer movieId;
+	private Integer planId;
 	private Integer noOfDays;
 	private Integer price;
 	

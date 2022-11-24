@@ -22,7 +22,7 @@ public class Subscription {
 	private User user;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "subs_ottid")
-	private Ott ott;
+	@JoinColumn(name = "subsPlanId")
+	private Plans plan;
 	
 }
