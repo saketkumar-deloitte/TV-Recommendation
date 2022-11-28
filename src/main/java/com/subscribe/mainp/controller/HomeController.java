@@ -30,11 +30,6 @@ public class HomeController {
     @Autowired
     private UserServiceImpl userService;
 
-    @GetMapping("/hello")
-    public String home(@RequestBody String username) {
-        return  "Kaam Kar Raha Hain";
-    }
-
     @PostMapping("/authenticate")
     public JwtResponse authenticate(@RequestBody JwtRequest jwtRequest) throws Exception{
 
