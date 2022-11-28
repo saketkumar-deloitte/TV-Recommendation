@@ -35,5 +35,5 @@ public class Ott {
 
     private Integer type;
 
-    private int genre;
+    private Integer genre;
 }
