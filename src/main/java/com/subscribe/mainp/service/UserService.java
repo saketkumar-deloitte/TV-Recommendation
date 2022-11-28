@@ -1,13 +1,14 @@
 package com.subscribe.mainp.service;
 
 import com.subscribe.mainp.dto.UserDto;
+import com.subscribe.mainp.entity.User;
 
 import java.util.List;
 
 public interface UserService {
 
     //create
-    UserDto createUser(UserDto userDto);
+    User createUser(UserDto userDto);
 
     //update
     UserDto updateUser(UserDto userDto, Integer userId);

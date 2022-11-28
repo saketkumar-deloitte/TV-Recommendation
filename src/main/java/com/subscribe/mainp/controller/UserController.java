@@ -4,6 +4,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import com.subscribe.mainp.dto.UserDto;
+import com.subscribe.mainp.entity.User;
 import com.subscribe.mainp.payloads.ApiResponse;
 import com.subscribe.mainp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/")
-    public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDto){
-        UserDto createUserDto = this.userService.createUser(userDto);
+    @PostMapping("/createUser")
+    public ResponseEntity<User> createUser(@Valid @RequestBody UserDto userDto){
+        User createUserDto = this.userService.createUser(userDto);
         return new ResponseEntity<>(createUserDto, HttpStatus.CREATED);
     }
 

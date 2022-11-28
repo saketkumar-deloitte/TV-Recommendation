@@ -25,6 +25,7 @@ public class ExcelReadService {
 
         List<Ott> list = new ArrayList<>();
         File file = new File("/home/romarutinaik/Videos/TV-Recommendation/src/main/java/com/subscribe/mainp/controller/movies.csv");
+//        File file = new File( "/home/pamethi/Desktop/product track/TV-Recommendation/src/main/java/com/subscribe/mainp/controller/movies.csv");
         InputStream inputStream = new FileInputStream(file);
         CsvParserSettings setting = new CsvParserSettings();
         setting.setHeaderExtractionEnabled(true);
