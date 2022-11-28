@@ -1,6 +1,10 @@
 package com.subscribe.mainp;
 
+import com.subscribe.mainp.entity.History;
+import com.subscribe.mainp.entity.Ott;
 import com.subscribe.mainp.entity.User;
+import com.subscribe.mainp.repository.HistoryRepository;
+import com.subscribe.mainp.repository.OttRepo;
 import com.subscribe.mainp.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -20,6 +24,7 @@ import java.util.stream.Stream;
 @EnableScheduling
 public class MainpApplication {
 	//Parv
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(MainpApplication.class, args);

@@ -2,6 +2,7 @@ package com.subscribe.mainp.controller;
 
 import com.subscribe.mainp.entity.Ott;
 import com.subscribe.mainp.repository.OttRepo;
+import com.subscribe.mainp.service.HistoryService;
 import com.subscribe.mainp.service.OttService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class OttController {
@@ -18,6 +20,7 @@ public class OttController {
 
     @Autowired
     OttService ottService;
+
 
     @PostMapping(value="/api/movies/upload")
     public String uploadData() throws Exception
@@ -67,4 +70,35 @@ public class OttController {
 
         return  ResponseEntity.ok(otts);
     }
+
+    @GetMapping(value="/api/movies/getRecommendations/{userID}")
+    public ResponseEntity<List<Ott>> getRecommendations(@PathVariable int userID) {
+        List<Ott> h = ottService.getRecommendations(userID);
+        if (h.size() == 0)
+        {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return ResponseEntity.of(Optional.of(h));
+    }
+
+    @GetMapping(value="/api/movies/getMovies")
+    public ResponseEntity<List<Ott>> getMovies() {
+        List<Ott> h = ottService.getMovies();
+        if (h.size() == 0)
+        {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return ResponseEntity.of(Optional.of(h));
+    }
+
+    @GetMapping(value="/api/movies/getSeries")
+    public ResponseEntity<List<Ott>> getSeries() {
+        List<Ott> h = ottService.getSeries();
+        if (h.size() == 0)
+        {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return ResponseEntity.of(Optional.of(h));
+    }
+
 }

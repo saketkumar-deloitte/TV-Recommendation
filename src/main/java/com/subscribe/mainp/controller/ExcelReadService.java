@@ -24,7 +24,7 @@ public class ExcelReadService {
     public List<Ott> ReadDataFromExcel() throws EncryptedDocumentException, InvalidFormatException, IOException{
 
         List<Ott> list = new ArrayList<>();
-        File file = new File("/home/papraneet/Desktop/Product Month/TV-Recommendation/src/main/java/com/subscribe/mainp/controller/movies.csv");
+        File file = new File("src/main/java/com/subscribe/mainp/controller/movies.csv");
         InputStream inputStream = new FileInputStream(file);
         CsvParserSettings setting = new CsvParserSettings();
         setting.setHeaderExtractionEnabled(true);
@@ -37,9 +37,7 @@ public class ExcelReadService {
             if(record.getString("ID") != null)
                 cr.setMovie_id(Integer.parseInt(record.getString("ID")));
             if(record.getString("Title") != null)
-                cr.setMovie_name(record.getString("Title"));
-       //     if(record.getString("Year") != null)
-         //       cr.setYear(Integer.parseInt(record.getString("Year")));
+                cr.setMoviename(record.getString("Title"));
             cr.setCategory(record.getString("Age"));
             if(record.getString("Rotten Tomatoes") != null)
                 cr.setRating(Integer.parseInt(record.getString("Rotten Tomatoes")));
@@ -55,8 +53,6 @@ public class ExcelReadService {
                 cr.setType(Integer.parseInt(record.getString("Type")));
             if(record.getString("Genre") != null)
                 cr.setGenre(Integer.parseInt(record.getString("Genre")));
-            if(record.getString("Price") != null)
-                cr.setPrice(Integer.parseInt(record.getString("Price")));
 
             list.add(cr);
 

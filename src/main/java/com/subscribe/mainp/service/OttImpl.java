@@ -13,4 +13,7 @@ public interface OttImpl {
     public List<Ott> getMovieByOTT(String name);
 
     public List<Ott> getMovieByTitle(String title);
+    public List<Ott> getRecommendations(int id);
+    public List<Ott> getMovies();
+    public List<Ott> getSeries();
 }

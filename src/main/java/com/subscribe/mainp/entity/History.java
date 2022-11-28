@@ -1,14 +1,15 @@
 package com.subscribe.mainp.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table
 public class History {
@@ -32,4 +33,7 @@ public class History {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "history_ottid")
     private Ott ott;
+
+    @Column
+    private Date viewDate;
 }

@@ -1,19 +1,22 @@
 package com.subscribe.mainp.service;
 
+import com.subscribe.mainp.entity.History;
 import com.subscribe.mainp.entity.Ott;
 import com.subscribe.mainp.exceptions.ResourceNotFoundException;
 import com.subscribe.mainp.repository.OttRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class OttService implements OttImpl{
 
     @Autowired
     OttRepo repo;
+
+    @Autowired
+    HistoryService historyService;
 
     @Override
     public Ott getMovieByMovieId(int id) {
@@ -53,4 +56,36 @@ public class OttService implements OttImpl{
         return shows;
     }
 
+    @Override
+    public List<Ott> getRecommendations(int id) {
+        List<History> hist=  historyService.getHistoryByUserId(id);
+
+        Set<Integer> set = new HashSet<>();
+
+        for(History h : hist)
+        {
+            set.add(h.getGenre());
+        }
+
+        List<Ott> ott = new ArrayList<>();
+
+        for(Integer g : set)
+        {
+            ott.addAll(repo.findShowByGenre(g));
+        }
+       // ott.sort((a,b) -> (b.getRating() - a.getRating()));
+        return ott;
+    }
+
+    @Override
+    public List<Ott> getMovies()
+    {
+        return repo.findMovies();
+    }
+
+    @Override
+    public List<Ott> getSeries()
+    {
+        return repo.findSeries();
+    }
 }

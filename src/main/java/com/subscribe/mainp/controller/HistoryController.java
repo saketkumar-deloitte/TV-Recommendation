@@ -2,6 +2,7 @@ package com.subscribe.mainp.controller;
 
 import com.subscribe.mainp.dto.HistoryDto;
 import com.subscribe.mainp.entity.History;
+import com.subscribe.mainp.entity.Ott;
 import com.subscribe.mainp.service.HistoryImpl;
 import com.subscribe.mainp.service.HistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,4 +58,5 @@ public class HistoryController {
             return new ResponseEntity<>("Failed to deleted", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
 }
